@@ -1,0 +1,44 @@
+---
+title: "Report"
+author: "Shweta Srikanth"
+output: html_document
+---
+# Explantory Data Analysis
+
+## Bar Charts
+
+### Bar Chart of Energy Level Category
+
+The Energy level of that species of dog is categorized into 5 different categories- Couch potato, Calm, Regular Exercise, Energetic and Needs lots of activity in order of increasing energy level. We see below a bar chart of the different categories.
+
+![Energy Level Bar Chart](./figures/energy_bar.png)
+
+### Bar Chart of Demeanor Category
+The demeanor of the species is categorzied into 5 different categories- Aloof/wary, Reserved with strangers, Alert/Responsive, Friendly and Outgoing, in increasing order of level of friendliness. We have plotted below  a bar chart of the different categories.
+
+![Demeanor Bar Chart](./figures/demeanor_bar.png)
+
+### Bar chart of trainability category
+The trainability of the species is categorized into 5 different categories- May be stubborn, Independent, Agreeable, Easy Training, Eager to Please in increasing order of ease of trainability.
+
+![Trainability Bar Chart](./figures/trainability_bar.png)
+
+### Bar chart of shedding level category
+
+The shedding level of a species is categorized into 5 categories- Infrequent, Occasional, Seasonal, Regularly and Frequent in increasing order of shedding levels.
+
+![Shedding Level Bar Chart](./figures/shedding_bar.png)
+
+### Bar Chart of grooming frequency category
+
+The frequency of grooming required for a species of dog is categorized into 5 categories- Occasional Bath/Brush, Weekly Brushing, 2-3 times a week brushing, Daily brushing and Professional, in increasing order of level of grooming.
+
+![Grooming Level Bar Chart](./figures/grooming_bar.png)
+
+
+### Scatter plot for Average height and weight
+
+Using the minimum and maximum height and weight, the average height and weight has been computed. Using this a scatter plot between the two has been produces.
+
+![Height and Weight Scatter Plot](./figures/hw_scatter.png) 
+As expected, in general, as the height of the dog increases, so does the weight. 
