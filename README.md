@@ -54,7 +54,7 @@ make figures/energy_bar.png
 
 ```
 
-#What to look at
+# What to look at
 
 In order to be able to get the final report, use the following command.
 
@@ -63,8 +63,10 @@ make report.html
 ```
 
 
-#NOTE
+# NOTE
 While trying to generate a html file of the report on an M1 mac I encounter an error saying that pandoc version 1.12.3 or higher is required and was not found.
 
 Due to this I have rendered the html file from the Report.Rmd and added it to the github repository for your reference.
+The Makefile renders all the images and derived datasets. The only issue is with generating the report.html file.
+
 
