@@ -63,9 +63,5 @@ make report.html
 ```
 
 
-# NOTE
-While trying to generate a html file of the report on an M1 mac I encounter an error saying that pandoc version 1.12.3 or higher is required and was not found.
-
-The Makefile renders all the images and derived datasets. The only issue is with generating the report.html file.
 
 
