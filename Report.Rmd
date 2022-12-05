@@ -1,9 +1,17 @@
 ---
 title: "Report"
 author: "Shweta Srikanth"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
-# Explantory Data Analysis
+
+# Aim of the Project
+In this project we aim to understand if the intelligence/obedience of a dog is related to its size. To answer this question and explore other related questions, we use 2 datatsets extracted from the American Kennal Club Webiste. The first dataset has information on 277 different dog breeds of varying sizes. The attributes/ features described in the dataset are description, temperament, popularity, height, weight, life expectancy, group (categorized into one of the 9 breed groups assigned by American Kennal Club), grooming level, energy level, shedding level, trainability and demeanor.
+
+The second dataset has information on 150 dog breeds. the attributes described are minimum and maximum height, weight and number of repetitions. Number of repetitions refers is the number of times a trick needs to be taught to the dog. This variable will be used as the measure of "intelligence/obedience"
+
+# Explantory Data Analysis on Dataset 1
 
 ## Bar Charts
 
@@ -11,7 +19,7 @@ output: html_document
 
 The Energy level of that species of dog is categorized into 5 different categories- Couch potato, Calm, Regular Exercise, Energetic and Needs lots of activity in order of increasing energy level. We see below a bar chart of the different categories.
 
-![Energy Level Bar Chart](./figures/energy_bar.png)
+![Energy Bar Chart](./figures/energy_bar.png) 
 
 ### Bar Chart of Demeanor Category
 The demeanor of the species is categorzied into 5 different categories- Aloof/wary, Reserved with strangers, Alert/Responsive, Friendly and Outgoing, in increasing order of level of friendliness. We have plotted below  a bar chart of the different categories.
@@ -38,7 +46,99 @@ The frequency of grooming required for a species of dog is categorized into 5 ca
 
 ### Scatter plot for Average height and weight
 
-Using the minimum and maximum height and weight, the average height and weight has been computed. Using this a scatter plot between the two has been produces.
+Using the minimum and maximum height and weight, the average height and weight has been computed. Using this a scatter plot between the two has been produced.
 
 ![Height and Weight Scatter Plot](./figures/hw_scatter.png) 
 As expected, in general, as the height of the dog increases, so does the weight. 
+
+### Box Plot of Height for each category of Grooming Level
+
+![Box Plot of Height categorized by grooming level](./figures/groom_height_box.png) 
+From this graph there doesn't seem to be any apparent relationship between the height (which is indicative of size) to the grooming level and frequency of the breed of dog.
+
+### Box Plot of Weight for each category of Grooming Level
+
+![Box Plot of Weight categorized by grooming level](./figures/groom_weight_box.png) 
+Once again there doesn't seem to be a clear association between weight of the dog (which is indicative of its size) and the grooming level and frequency.
+
+### Average Height and Expectancy
+Using the average height and average expectancy of a breed, we plot a scatter plot between the 2 variables look for any visible trends.
+
+![Height and Expectancy Scatter Plot](./figures/h_exp_scatter.png) 
+Though not a very clear trend, there seems to be a higher concetraion of taller dogs with lower life expectancy and a higher concentration of shorter dogs with higher life expectancy.
+
+### Average Weight and Expectancy
+Using the average weight and average expectancy of a breed, we plot a scatter plot between the 2 variables look for any visible trends.
+
+![Height and Expectancy Scatter Plot](./figures/w_exp_scatter.png) 
+In this case as well, heavier dogs seems to have shorter life expetancies when compared to lighter dogs.
+
+From these two graphs there seems to be a relationship betweeb size of the dog and it's life expectany with smaller dogs having higher life expectancies.
+
+Finally using dataset 1, we plot a mosaic plot between normalized profile of intelligence for each size grouping based on the number of breeds in the respective size group. To accomplish this we have categorized the dogs into 5 groups of intelligence based on their trainability value.
+![Mosaic Plot](./figures/mosaic_plot.png) 
+write some more stuff here
+
+###Exploring some more questions using dataset 2
+Using the 2nd dataset, we would like to further explore the relationship between intelligence/obedience and size (which is explained by height and weight). We first perform some explanatory data analysis on this dataset.
+
+
+#Top 10 Tallest Breeds
+
+The top 10 dog breeds with highest average height is depicted in the graph below:
+
+![Tallest Dogs](./figures/tallest_dogs.png) 
+#Top 10 Shortest Breeds
+
+The top 10 dog breeds with lowest average height is depicted in the graph below:
+
+![Shortest Dogs](./figures/shortest_dogs.png) 
+#Top 10 Heaviest Breeds
+
+The top 10 dog breeds with highest average weight is depicted in the graph below:
+
+![Heaviest Dogs](./figures/heaviest_dogs.png) 
+#Top 10 Lightest Breeds
+
+The top 10 dog breeds with lowest average weight is depicted in the graph below:
+
+![Lightest Dogs](./figures/lightest_dogs.png) 
+#Top 10 Smartest Breeds
+
+The top 10 dog breeds with the lowest average number of repetitions is depicted in the graph below:
+
+![Smartest Dogs](./figures/smartest_dogs.png) 
+#Least 10 Smartest Breeds
+
+The top 10 dog breeds with highest number of average repetitions is depicted in the graph below:
+
+![Not Smart Dogs](./figures/not_smart_dogs.png) 
+### Scatter Plot between Height and Number of Repetitions
+
+We plot a scatter plot between the average height and average number of repetitions for each breed.
+
+![Height and Number of Repetitions](./figures/h_reps_scatter.png)
+From this scatter plot, we observe that taller dogs seems to require lower number of repetitions, indicating higher levels of intelligence/obedience
+
+
+### Scatter Plot between Weight and Number of Repetitions
+
+We plot a scatter plot between the average weight and average number of repetitions for each breed.
+
+![Weight and Number of Repetitions](./figures/w_reps_scatter.png)
+This scatter plot also shows that "bigger", which in this case means heavier dogs require lesser number of repetitions than "smaller" or lighter dogs.
+
+
+### Correlation between all the variables
+
+![Correlation Heat Map](./figures/corr_1.png)
+
+### Neater Correlation Heat Map
+
+![Correlation Heat Map 2](./figures/corr_2.png)
+### Logistic Regression Between Intelligence and Height
+
+![log Reg Height](./figures/log_reg_height.png)
+### Logistic Regression Between Intelligence and Weight
+
+![Log Reg Weight](./figures/log_reg_weight.png)
