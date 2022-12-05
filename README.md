@@ -54,7 +54,7 @@ make figures/energy_bar.png
 
 # What to look at
 
-In order to be able to get the final report, use the following command.
+In order to be able to get the final report, use the following command. Ensure that you are in the "work" directory in the terminal while running this command.
 
 ```
 make report.html
