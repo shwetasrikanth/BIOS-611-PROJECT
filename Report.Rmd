@@ -9,49 +9,53 @@ output:
 # Aim of the Project
 In this project we aim to understand if the intelligence/obedience of a dog is related to its size. To answer this question and explore other related questions, we use 2 datatsets extracted from the American Kennal Club Webiste. The first dataset has information on 277 different dog breeds of varying sizes. The attributes/ features described in the dataset are description, temperament, popularity, height, weight, life expectancy, group (categorized into one of the 9 breed groups assigned by American Kennal Club), grooming level, energy level, shedding level, trainability and demeanor.
 
-The second dataset has information on 150 dog breeds. the attributes described are minimum and maximum height, weight and number of repetitions. Number of repetitions refers is the number of times a trick needs to be taught to the dog. This variable will be used as the measure of "intelligence/obedience"
+The second dataset has information on 150 dog breeds. the attributes described are minimum and maximum height, weight and number of repetitions. Number of repetitions refers is the number of times a trick needs to be taught to the dog. This variable will be used as the measure of "intelligence/obedience".
 
-# Explantory Data Analysis on Dataset 1
+To begin with an explantory data analysis is done one dataset 1.
 
-## Bar Charts
+## Explantory Data Analysis on Dataset 1
 
-### Bar Chart of Energy Level Category
+### Bar charts to visualze categorization within each varible. 
+
+#### Bar Chart of Energy Level Category
 
 The Energy level of that species of dog is categorized into 5 different categories- Couch potato, Calm, Regular Exercise, Energetic and Needs lots of activity in order of increasing energy level. We see below a bar chart of the different categories.
 
 ![Energy Bar Chart](./figures/energy_bar.png) 
 
-### Bar Chart of Demeanor Category
+#### Bar Chart of Demeanor Category
 The demeanor of the species is categorzied into 5 different categories- Aloof/wary, Reserved with strangers, Alert/Responsive, Friendly and Outgoing, in increasing order of level of friendliness. We have plotted below  a bar chart of the different categories.
 
 ![Demeanor Bar Chart](./figures/demeanor_bar.png)
 
-### Bar chart of trainability category
+#### Bar chart of trainability category
 The trainability of the species is categorized into 5 different categories- May be stubborn, Independent, Agreeable, Easy Training, Eager to Please in increasing order of ease of trainability.
 
 ![Trainability Bar Chart](./figures/trainability_bar.png)
 
-### Bar chart of shedding level category
+#### Bar chart of shedding level category
 
 The shedding level of a species is categorized into 5 categories- Infrequent, Occasional, Seasonal, Regularly and Frequent in increasing order of shedding levels.
 
 ![Shedding Level Bar Chart](./figures/shedding_bar.png)
 
-### Bar Chart of grooming frequency category
+#### Bar Chart of grooming frequency category
 
 The frequency of grooming required for a species of dog is categorized into 5 categories- Occasional Bath/Brush, Weekly Brushing, 2-3 times a week brushing, Daily brushing and Professional, in increasing order of level of grooming.
 
 ![Grooming Level Bar Chart](./figures/grooming_bar.png)
+### Relationship between average height and weight.
 
-
-### Scatter plot for Average height and weight
+#### Scatter plot
 
 Using the minimum and maximum height and weight, the average height and weight has been computed. Using this a scatter plot between the two has been produced.
 
 ![Height and Weight Scatter Plot](./figures/hw_scatter.png) 
 As expected, in general, as the height of the dog increases, so does the weight. 
 
-### Box Plot of Height for each category of Grooming Level
+### Grooming level and size of the dog
+
+Another interesting question to explore is to see if the grooming level of dogs is related to their size. One might hypothesize that larger dogs would require higher frequency and levels of grooming compared to smaller dogs. To answer this question we plot box plots for heights for each group of grooming level.
 
 ![Box Plot of Height categorized by grooming level](./figures/groom_height_box.png) 
 From this graph there doesn't seem to be any apparent relationship between the height (which is indicative of size) to the grooming level and frequency of the breed of dog.
@@ -61,13 +65,15 @@ From this graph there doesn't seem to be any apparent relationship between the h
 ![Box Plot of Weight categorized by grooming level](./figures/groom_weight_box.png) 
 Once again there doesn't seem to be a clear association between weight of the dog (which is indicative of its size) and the grooming level and frequency.
 
-### Average Height and Expectancy
+#### Average Height and Expectancy
+
+Another relationship that is worth exploring is between height, weight and life expectancy of dogs.
 Using the average height and average expectancy of a breed, we plot a scatter plot between the 2 variables look for any visible trends.
 
 ![Height and Expectancy Scatter Plot](./figures/h_exp_scatter.png) 
 Though not a very clear trend, there seems to be a higher concetraion of taller dogs with lower life expectancy and a higher concentration of shorter dogs with higher life expectancy.
 
-### Average Weight and Expectancy
+#### Average Weight and Expectancy
 Using the average weight and average expectancy of a breed, we plot a scatter plot between the 2 variables look for any visible trends.
 
 ![Height and Expectancy Scatter Plot](./figures/w_exp_scatter.png) 
@@ -75,53 +81,59 @@ In this case as well, heavier dogs seems to have shorter life expetancies when c
 
 From these two graphs there seems to be a relationship betweeb size of the dog and it's life expectany with smaller dogs having higher life expectancies.
 
-Finally using dataset 1, we plot a mosaic plot between normalized profile of intelligence for each size grouping based on the number of breeds in the respective size group. To accomplish this we have categorized the dogs into 5 groups of intelligence based on their trainability value.
-![Mosaic Plot](./figures/mosaic_plot.png) 
-write some more stuff here
+### Mosaic Plot for weight and intelligence.
 
-###Exploring some more questions using dataset 2
+Finally using dataset 1, we plot a mosaic plot between normalized profile of intelligence for each size grouping based on the number of breeds in the respective size group. To accomplish this we have categorized the dogs into 5 groups of intelligence based on their trainability value. We have also created 5 groups of weight categories using the average weights. The width of the columns is proportional to the number of observations in each level of the weight categories. The vertical length of the bars is proportional to the number of observations in the particular intelligence groups within each level of weight categories.
+![Mosaic Plot](./figures/mosaic_plot.png) 
+
+## Exploring some more questions using dataset 2
 Using the 2nd dataset, we would like to further explore the relationship between intelligence/obedience and size (which is explained by height and weight). We first perform some explanatory data analysis on this dataset.
 
 
-#Top 10 Tallest Breeds
+### Top 10 Tallest Breeds
 
 The top 10 dog breeds with highest average height is depicted in the graph below:
 
 ![Tallest Dogs](./figures/tallest_dogs.png) 
-#Top 10 Shortest Breeds
+### Top 10 Shortest Breeds
 
 The top 10 dog breeds with lowest average height is depicted in the graph below:
 
 ![Shortest Dogs](./figures/shortest_dogs.png) 
-#Top 10 Heaviest Breeds
+### Top 10 Heaviest Breeds
 
 The top 10 dog breeds with highest average weight is depicted in the graph below:
 
 ![Heaviest Dogs](./figures/heaviest_dogs.png) 
-#Top 10 Lightest Breeds
+### Top 10 Lightest Breeds
 
 The top 10 dog breeds with lowest average weight is depicted in the graph below:
 
 ![Lightest Dogs](./figures/lightest_dogs.png) 
-#Top 10 Smartest Breeds
+### Top 10 Smartest Breeds
 
 The top 10 dog breeds with the lowest average number of repetitions is depicted in the graph below:
 
-![Smartest Dogs](./figures/smartest_dogs.png) 
-#Least 10 Smartest Breeds
+![Smartest Dogs](./figures/smart_dogs.png) 
+### Least 10 Smartest Breeds
 
 The top 10 dog breeds with highest number of average repetitions is depicted in the graph below:
 
 ![Not Smart Dogs](./figures/not_smart_dogs.png) 
-### Scatter Plot between Height and Number of Repetitions
+From the 6 graphs above, there seem to be a few dogs that appear in the lightest, shortest and least smartest dogs list such as Skye Terrier, Shih zu, Silky Terrier etc. Similarly there also seem to be a few common dogs such as Great Dane, Irish Wolfhound etc in the heaviest, tallest and smartest breeds. 
 
+### Relationship between size and intelligence
+
+To further assess the relationship between size and intelligence, we plot scatter plots between height, weight and number of repetitions (which is indicative of intelligence)
+
+#### Scatter plot between height and number of repetitions.
 We plot a scatter plot between the average height and average number of repetitions for each breed.
 
 ![Height and Number of Repetitions](./figures/h_reps_scatter.png)
 From this scatter plot, we observe that taller dogs seems to require lower number of repetitions, indicating higher levels of intelligence/obedience
 
 
-### Scatter Plot between Weight and Number of Repetitions
+#### Scatter Plot between Weight and Number of Repetitions
 
 We plot a scatter plot between the average weight and average number of repetitions for each breed.
 
@@ -131,14 +143,51 @@ This scatter plot also shows that "bigger", which in this case means heavier dog
 
 ### Correlation between all the variables
 
-![Correlation Heat Map](./figures/corr_1.png)
+To understand the relationship between each pairs of variables, we plot a correlation heat map.
 
+#### Correlation Heat Map
+
+![Correlation Heat Map](./figures/corr_1.png)
+Since this correlation heat map is harder to interpret, we present a neater version of the same, with pearson's correlation coefficient values. 
 ### Neater Correlation Heat Map
 
 ![Correlation Heat Map 2](./figures/corr_2.png)
-### Logistic Regression Between Intelligence and Height
+As we can see, average height and average number of repetitions have a coefficient of -0.66, which indicates that height and no of repetitions are negatively associated. Similarly, weight and noumber of repetitions are negatively associated with a correlation coefficient of -0.72. Since lower number of repetitions means higher level of intelligence, we can infer that as the size of the dogs increase their intelligence seems to increase.
 
+### Logistic Regression Model
+
+Finally, we fit a logistic regression model with intelligence as the outcome variable and average height and weight as the independent variables. The variable "easy to train" is representative of intelligence. We code this variable as 1 one number of repetitions required is less than 15 and 0 when it is greater than 15. The model is as shown below.
+
+Call:
+glm(formula = easy_to_train ~ avg_w + avg_h, family = "binomial", 
+    data = d1)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.1331  -0.4960  -0.2925  -0.1783   2.8852  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -4.14655    1.51715  -2.733 0.006274 ** 
+avg_w        0.06925    0.01989   3.481 0.000499 ***
+avg_h       -0.06746    0.10468  -0.644 0.519299    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 146.003  on 135  degrees of freedom
+Residual deviance:  86.938  on 133  degrees of freedom
+AIC: 92.938
+
+Number of Fisher Scoring iterations: 6
+
+
+From the p values, we see that average weight is a significant predictor of intelligence in dogs.
+
+#### Plot for intelligence and height
 ![log Reg Height](./figures/log_reg_height.png)
-### Logistic Regression Between Intelligence and Weight
+#### Plot for Intelligence and Weight
 
 ![Log Reg Weight](./figures/log_reg_weight.png)
+Hence from the analyses, we conclude that size of the dog, and more strongly the weight of the dog is related to its intelligence.
